@@ -1,59 +1,149 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+enter Space Booking System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Project Overview
 
-## About Laravel
+Center Space Booking System is a web-based and mobile API booking management system that allows customers to browse centers, explore available spaces, and make bookings.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The system also provides an administrative dashboard for managing centers, spaces, employees, and customer bookings.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Main Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Authentication and User Management
 
-## Learning Laravel
+- Customer registration and login through REST API.
+- Customer logout and profile retrieval.
+- Super Admin account management.
+- Employee management.
+- Role-based access control.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+2. Center Management
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Create, view, update, and delete centers.
+- Manage center information and locations.
+- Activate or deactivate centers.
 
-## Laravel Sponsors
+3. Space Management
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- Create, view, update, and delete spaces.
+- Assign spaces to centers.
+- Define space type, capacity, and hourly price.
+- Manage space availability and maintenance status.
 
-### Premium Partners
+4. Booking Management
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- Customers can create bookings through the API.
+- Customers can view their own bookings.
+- Customers can cancel eligible bookings.
+- Employees can review bookings and confirm or reject them.
+- Calculate booking prices based on duration and hourly price.
+- Validate booking capacity and availability.
 
-## Contributing
+5. Dashboard
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- View statistics about centers, spaces, employees, and customers.
+- View booking statistics by status.
+- Manage system data through a web interface.
 
-## Code of Conduct
+User Roles
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- Super Admin: Manages employees and the overall system.
+- Employee: Manages centers, spaces, and bookings through the dashboard.
+- Customer: Registers and manages bookings through the mobile application API.
 
-## Security Vulnerabilities
+Technologies Used
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- PHP
+- Laravel
+- MySQL
+- Laravel Sanctum
+- REST API
+- Blade
+- Bootstrap
+- HTML
+- CSS
+- JavaScript
+- Postman
+- Git and GitHub
 
-## License
+Installation and Setup
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. Clone the Repository
+
+git clone https://github.com/noursalehh/Center_Space_Booking_System.git
+
+2. Navigate to the Project Folder
+
+cd Center_Space_Booking_System
+
+3. Install Dependencies
+
+composer install
+
+4. Configure Environment
+
+Copy ".env.example" and create a new file named ".env".
+
+Configure your database connection in the ".env" file.
+
+5. Generate Application Key
+
+php artisan key:generate
+
+6. Run Migrations and Seeders
+
+php artisan migrate --seed
+
+7. Start the Development Server
+
+php artisan serve
+
+The application will be available at:
+
+"http://127.0.0.1:8000"
+
+API Endpoints
+
+Authentication
+
+Method| Endpoint| Description
+POST| "/api/register"| Register a customer
+POST| "/api/login"| Customer login
+POST| "/api/logout"| Customer logout
+GET| "/api/my-profile"| Get customer profile
+
+Centers
+
+Method| Endpoint| Description
+GET| "/api/centers"| Get active centers
+GET| "/api/centers/{id}"| Get center details
+
+Spaces
+
+Method| Endpoint| Description
+GET| "/api/centers/{center}/spaces"| Get spaces of a center
+GET| "/api/spaces/{id}"| Get space details
+
+Bookings
+
+Method| Endpoint| Description
+POST| "/api/bookings"| Create a booking
+GET| "/api/bookings"| Get customer bookings
+GET| "/api/bookings/{id}"| Get booking details
+PATCH| "/api/bookings/{id}/cancel"| Cancel a booking
+
+Booking Statuses
+
+- Pending
+- Confirmed
+- Rejected
+- Cancelled
+
+Authentication
+
+The API uses Laravel Sanctum for token-based authentication.
+
+Protected API endpoints require a valid Bearer Token.
+
+Project Repository
+
+"Center Space Booking System" (https://github.com/noursalehh/Center_Space_Booking_System)
