@@ -60,8 +60,6 @@ Technologies Used
 - Blade
 - Bootstrap
 - HTML
-- CSS
-- JavaScript
 - Postman
 - Git and GitHub
 
