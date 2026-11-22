@@ -1,0 +1,1339 @@
+{
+  "info": {
+    "_exporter_id": "54112408",
+    "_postman_id": "967e4efe-fbb5-43da-8730-f03435b11897",
+    "name": "midProject",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "logout",
+      "request": {
+        "auth": {
+          "bearer": [
+            {
+              "key": "token",
+              "type": "string",
+              "value": "{{vault:auth_secret_07xt}}"
+            }
+          ],
+          "type": "bearer"
+        },
+        "body": {
+          "formdata": [],
+          "mode": "formdata"
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "disabled": true,
+            "key": "user_id",
+            "value": ""
+          }
+        ],
+        "method": "POST",
+        "url": {
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "path": [
+            "api",
+            "logout"
+          ],
+          "port": "8000",
+          "protocol": "http",
+          "raw": "http://127.0.0.1:8000/api/logout"
+        }
+      },
+      "response": [1]
+    },
+    {
+      "name": "register",
+      "request": {
+        "body": {
+          "formdata": [
+            {
+              "key": "name",
+              "type": "text",
+              "value": "Ola"
+            },
+            {
+              "key": "email",
+              "type": "text",
+              "value": "ola@gmail.com"
+            },
+            {
+              "key": "password",
+              "type": "text",
+              "value": "olaolaola"
+            },
+            {
+              "key": "phone_number",
+              "type": "text",
+              "value": "0900000002"
+            },
+            {
+              "key": "address",
+              "type": "text",
+              "value": "syria"
+            },
+            {
+              "key": "date_of_birth",
+              "type": "text",
+              "value": "1994-7-1"
+            },
+            {
+              "key": "gender",
+              "type": "text",
+              "value": "female"
+            }
+          ],
+          "mode": "formdata"
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "url": {
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "path": [
+            "api",
+            "register"
+          ],
+          "port": "8000",
+          "protocol": "http",
+          "query": [
+            {
+              "disabled": true,
+              "key": "name",
+              "value": ""
+            }
+          ],
+          "raw": "http://127.0.0.1:8000/api/register"
+        }
+      },
+      "response": [
+        {
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"message\": \"This email is already registered.\",\n  \"errors\": {\n    \"email\": [\n      \"This email is already registered.\"\n    ]\n  }\n}",
+          "code": 422,
+          "cookie": [],
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.12"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 22 Nov 2026 18:04:49 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "name": "register",
+          "originalRequest": {
+            "body": {
+              "formdata": [
+                {
+                  "key": "name",
+                  "type": "text",
+                  "value": "Ola"
+                },
+                {
+                  "key": "email",
+                  "type": "text",
+                  "value": "ola@gmail.com"
+                },
+                {
+                  "key": "password",
+                  "type": "text",
+                  "value": "olaolaola"
+                },
+                {
+                  "key": "phone_number",
+                  "type": "text",
+                  "value": "0900000002"
+                },
+                {
+                  "key": "address",
+                  "type": "text",
+                  "value": "syria"
+                },
+                {
+                  "key": "date_of_birth",
+                  "type": "text",
+                  "value": "1994-7-1"
+                },
+                {
+                  "key": "gender",
+                  "type": "text",
+                  "value": "female"
+                }
+              ],
+              "mode": "formdata"
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "url": {
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [
+                "api",
+                "register"
+              ],
+              "port": "8000",
+              "protocol": "http",
+              "query": [
+                {
+                  "disabled": true,
+                  "key": "name",
+                  "value": null
+                }
+              ],
+              "raw": "http://127.0.0.1:8000/api/register"
+            }
+          },
+          "status": "Unprocessable Content"
+        }
+      ]
+    },
+    {
+      "name": "login",
+      "request": {
+        "auth": {
+          "bearer": [
+            {
+              "key": "token",
+              "type": "string",
+              "value": ""
+            }
+          ],
+          "type": "bearer"
+        },
+        "body": {
+          "formdata": [
+            {
+              "disabled": true,
+              "key": "name",
+              "type": "text",
+              "value": "Mo"
+            },
+            {
+              "key": "password",
+              "type": "text",
+              "value": "olaolaola"
+            },
+            {
+              "key": "email",
+              "type": "text",
+              "value": "ola@gmail.com"
+            }
+          ],
+          "mode": "formdata"
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "url": {
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "path": [
+            "api",
+            "login"
+          ],
+          "port": "8000",
+          "protocol": "http",
+          "query": [
+            {
+              "disabled": true,
+              "key": "name",
+              "value": "Ali"
+            },
+            {
+              "disabled": true,
+              "key": "password",
+              "value": ""
+            }
+          ],
+          "raw": "http://127.0.0.1:8000/api/login"
+        }
+      },
+      "response": [
+        {
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"message\": \"Login successful\",\n  \"user\": {\n    \"id\": 4,\n    \"name\": \"Ola\",\n    \"email\": \"ola@gmail.com\",\n    \"email_verified_at\": null,\n    \"phone_number\": \"0900000002\",\n    \"address\": \"syria\",\n    \"type\": \"customer\",\n    \"created_at\": \"2026-11-22T13:07:56.000000Z\",\n    \"updated_at\": \"2026-11-22T13:07:56.000000Z\"\n  },\n  \"token\": \"7|d8iybqub54U5QtzWWErmQyabZyEQxE9nsNNBo7aO0f577163\"\n}",
+          "code": 200,
+          "cookie": [],
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.12"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 22 Nov 2026 18:05:00 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "name": "login",
+          "originalRequest": {
+            "body": {
+              "formdata": [
+                {
+                  "disabled": true,
+                  "key": "name",
+                  "type": "text",
+                  "value": "Mo"
+                },
+                {
+                  "key": "password",
+                  "type": "text",
+                  "value": "olaolaola"
+                },
+                {
+                  "key": "email",
+                  "type": "text",
+                  "value": "ola@gmail.com"
+                }
+              ],
+              "mode": "formdata"
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "url": {
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [
+                "api",
+                "login"
+              ],
+              "port": "8000",
+              "protocol": "http",
+              "query": [
+                {
+                  "disabled": true,
+                  "key": "name",
+                  "value": "Ali"
+                },
+                {
+                  "disabled": true,
+                  "key": "password",
+                  "value": null
+                }
+              ],
+              "raw": "http://127.0.0.1:8000/api/login"
+            }
+          },
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "name": "myprofile",
+      "request": {
+        "auth": {
+          "bearer": [
+            {
+              "key": "token",
+              "type": "string",
+              "value": "{{vault:auth_secret_07xt}}"
+            }
+          ],
+          "type": "bearer"
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "url": {
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "path": [
+            "api",
+            "myprofile"
+          ],
+          "port": "8000",
+          "protocol": "http",
+          "raw": "http://127.0.0.1:8000/api/myprofile"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "activeCenters",
+      "request": {
+        "auth": {
+          "bearer": [
+            {
+              "key": "token",
+              "type": "string",
+              "value": ""
+            }
+          ],
+          "type": "bearer"
+        },
+        "body": {
+          "formdata": [],
+          "mode": "formdata"
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "url": {
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "path": [
+            "api",
+            "centers"
+          ],
+          "port": "8000",
+          "protocol": "http",
+          "raw": "http://127.0.0.1:8000/api/centers"
+        }
+      },
+      "response": [
+        {
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"message\": \"Active centers retrieved successfully\",\n  \"data\": [\n    {\n      \"id\": 1,\n      \"name\": \"Damascus Main Center\",\n      \"description\": \"Description Main company center with meeting rooms and coworking spaces.\",\n      \"address\": \"Mazzeh Highway, Building 25\",\n      \"city\": \"Damascus\",\n      \"country\": \"Syria\",\n      \"latitude\": null,\n      \"longitude\": null,\n      \"contact_number\": \"0112345678\",\n      \"status\": \"active\",\n      \"created_at\": \"2026-11-21T20:33:35.000000Z\",\n      \"updated_at\": \"2026-11-21T20:33:35.000000Z\"\n    }\n  ]\n}",
+          "code": 200,
+          "cookie": [],
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.12"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 22 Nov 2026 18:05:13 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "name": "activeCenters",
+          "originalRequest": {
+            "body": {
+              "formdata": [],
+              "mode": "formdata"
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [
+                "api",
+                "centers"
+              ],
+              "port": "8000",
+              "protocol": "http",
+              "raw": "http://127.0.0.1:8000/api/centers"
+            }
+          },
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "name": "showCenter",
+      "request": {
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "url": {
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "path": [
+            "api",
+            "centers",
+            "2"
+          ],
+          "port": "8000",
+          "protocol": "http",
+          "raw": "http://127.0.0.1:8000/api/centers/2"
+        }
+      },
+      "response": [
+        {
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"message\": \"Center details retrieved successfully\",\n  \"data\": {\n    \"id\": 2,\n    \"name\": \"Homs Study Center\",\n    \"description\": \"Center dedicated to studying and quiet work\",\n    \"address\": \"Al-Inshaat, Street 15\",\n    \"city\": \"Homs\",\n    \"country\": \"Syria\",\n    \"latitude\": null,\n    \"longitude\": null,\n    \"contact_number\": \"0312345678\",\n    \"status\": \"inactive\",\n    \"created_at\": \"2026-11-22T12:35:19.000000Z\",\n    \"updated_at\": \"2026-11-22T12:35:19.000000Z\"\n  }\n}",
+          "code": 200,
+          "cookie": [],
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.12"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 22 Nov 2026 18:05:17 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "name": "showCenter",
+          "originalRequest": {
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [
+                "api",
+                "centers",
+                "2"
+              ],
+              "port": "8000",
+              "protocol": "http",
+              "raw": "http://127.0.0.1:8000/api/centers/2"
+            }
+          },
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "name": "spacewithCenter",
+      "request": {
+        "header": [],
+        "method": "GET",
+        "url": {
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "path": [
+            "api",
+            "centers",
+            "1",
+            "spaces"
+          ],
+          "port": "8000",
+          "protocol": "http",
+          "raw": "http://127.0.0.1:8000/api/centers/1/spaces"
+        }
+      },
+      "response": [
+        {
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"message\": \"Spaces retrieved successfully\",\n  \"data\": {\n    \"space\": [\n      {\n        \"id\": 1,\n        \"name\": \"Training Hall 1\",\n        \"description\": \"Large hall suitable for training sessions and workshops.\",\n        \"type\": \"Training Hall\",\n        \"center_id\": 1,\n        \"maximum_capacity\": 31,\n        \"hourly_price\": \"25.00\",\n        \"status\": \"available\",\n        \"created_at\": \"2026-11-21T20:59:36.000000Z\",\n        \"updated_at\": \"2026-11-21T21:09:32.000000Z\"\n      }\n    ],\n    \"center\": {\n      \"id\": 1,\n      \"name\": \"Damascus Main Center\",\n      \"description\": \"Description Main company center with meeting rooms and coworking spaces.\",\n      \"address\": \"Mazzeh Highway, Building 25\",\n      \"city\": \"Damascus\",\n      \"country\": \"Syria\",\n      \"latitude\": null,\n      \"longitude\": null,\n      \"contact_number\": \"0112345678\",\n      \"status\": \"active\",\n      \"created_at\": \"2026-11-21T20:33:35.000000Z\",\n      \"updated_at\": \"2026-11-21T20:33:35.000000Z\"\n    }\n  }\n}",
+          "code": 200,
+          "cookie": [],
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.12"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 22 Nov 2026 18:05:21 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "name": "spacewithCenter",
+          "originalRequest": {
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [
+                "api",
+                "centers",
+                "1",
+                "spaces"
+              ],
+              "port": "8000",
+              "protocol": "http",
+              "raw": "http://127.0.0.1:8000/api/centers/1/spaces"
+            }
+          },
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "name": "showSpace",
+      "request": {
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "url": {
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "path": [
+            "api",
+            "spaces",
+            "1"
+          ],
+          "port": "8000",
+          "protocol": "http",
+          "raw": "http://127.0.0.1:8000/api/spaces/1"
+        }
+      },
+      "response": [
+        {
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"message\": \"Space details retrieved successfully\",\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Training Hall 1\",\n    \"description\": \"Large hall suitable for training sessions and workshops.\",\n    \"type\": \"Training Hall\",\n    \"center_id\": 1,\n    \"maximum_capacity\": 31,\n    \"hourly_price\": \"25.00\",\n    \"status\": \"available\",\n    \"created_at\": \"2026-11-21T20:59:36.000000Z\",\n    \"updated_at\": \"2026-11-21T21:09:32.000000Z\"\n  }\n}",
+          "code": 200,
+          "cookie": [],
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.12"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 22 Nov 2026 18:04:14 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "name": "showSpace",
+          "originalRequest": {
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [
+                "api",
+                "spaces",
+                "1"
+              ],
+              "port": "8000",
+              "protocol": "http",
+              "raw": "http://127.0.0.1:8000/api/spaces/1"
+            }
+          },
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "name": "createBooking",
+      "request": {
+        "auth": {
+          "bearer": [
+            {
+              "key": "token",
+              "type": "string",
+              "value": "{{vault:auth_secret_1c9k}}"
+            }
+          ],
+          "type": "bearer"
+        },
+        "body": {
+          "formdata": [
+            {
+              "key": "space_id",
+              "type": "text",
+              "value": "1"
+            },
+            {
+              "key": "booking_date",
+              "type": "text",
+              "value": "2026-11-23"
+            },
+            {
+              "key": "start_time",
+              "type": "text",
+              "value": "10:00"
+            },
+            {
+              "key": "end_time",
+              "type": "text",
+              "value": "12:00"
+            },
+            {
+              "key": "number_of_people",
+              "type": "text",
+              "value": "20"
+            }
+          ],
+          "mode": "formdata"
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "url": {
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "path": [
+            "api",
+            "bookings"
+          ],
+          "port": "8000",
+          "protocol": "http",
+          "raw": "http://127.0.0.1:8000/api/bookings"
+        }
+      },
+      "response": [
+        {
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"message\": \"Booking created successfully.\",\n  \"booking\": {\n    \"space_id\": \"1\",\n    \"booking_date\": \"2026-11-23\",\n    \"start_time\": \"10:00\",\n    \"end_time\": \"12:00\",\n    \"number_of_people\": \"20\",\n    \"total_price\": 50,\n    \"status\": \"Pending\",\n    \"customer_id\": 2,\n    \"updated_at\": \"2026-11-22T18:05:30.000000Z\",\n    \"created_at\": \"2026-11-22T18:05:30.000000Z\",\n    \"id\": 2\n  }\n}",
+          "code": 201,
+          "cookie": [],
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.12"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 22 Nov 2026 18:05:30 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "name": "createBooking",
+          "originalRequest": {
+            "body": {
+              "formdata": [
+                {
+                  "key": "space_id",
+                  "type": "text",
+                  "value": "1"
+                },
+                {
+                  "key": "booking_date",
+                  "type": "text",
+                  "value": "2026-11-23"
+                },
+                {
+                  "key": "start_time",
+                  "type": "text",
+                  "value": "10:00"
+                },
+                {
+                  "key": "end_time",
+                  "type": "text",
+                  "value": "12:00"
+                },
+                {
+                  "key": "number_of_people",
+                  "type": "text",
+                  "value": "20"
+                }
+              ],
+              "mode": "formdata"
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "url": {
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ],
+              "port": "8000",
+              "protocol": "http",
+              "raw": "http://127.0.0.1:8000/api/bookings"
+            }
+          },
+          "status": "Created"
+        }
+      ]
+    },
+    {
+      "name": "allBookings",
+      "request": {
+        "auth": {
+          "bearer": [
+            {
+              "key": "token",
+              "type": "string",
+              "value": "{{vault:auth_secret_1c9k}}"
+            }
+          ],
+          "type": "bearer"
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "url": {
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "path": [
+            "api",
+            "bookings"
+          ],
+          "port": "8000",
+          "protocol": "http",
+          "raw": "http://127.0.0.1:8000/api/bookings"
+        }
+      },
+      "response": [
+        {
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"message\": \"Bookings retrieved successfully.\",\n  \"bookings\": [\n    {\n      \"id\": 2,\n      \"customer_id\": 2,\n      \"space_id\": 1,\n      \"booking_date\": \"2026-11-23\",\n      \"start_time\": \"10:00:00\",\n      \"end_time\": \"12:00:00\",\n      \"number_of_people\": 20,\n      \"total_price\": \"50.00\",\n      \"status\": \"pending\",\n      \"created_at\": \"2026-11-22T18:05:30.000000Z\",\n      \"updated_at\": \"2026-11-22T18:05:30.000000Z\",\n      \"space\": {\n        \"id\": 1,\n        \"name\": \"Training Hall 1\",\n        \"description\": \"Large hall suitable for training sessions and workshops.\",\n        \"type\": \"Training Hall\",\n        \"center_id\": 1,\n        \"maximum_capacity\": 31,\n        \"hourly_price\": \"25.00\",\n        \"status\": \"available\",\n        \"created_at\": \"2026-11-21T20:59:36.000000Z\",\n        \"updated_at\": \"2026-11-21T21:09:32.000000Z\",\n        \"center\": {\n          \"id\": 1,\n          \"name\": \"Damascus Main Center\",\n          \"description\": \"Description Main company center with meeting rooms and coworking spaces.\",\n          \"address\": \"Mazzeh Highway, Building 25\",\n          \"city\": \"Damascus\",\n          \"country\": \"Syria\",\n          \"latitude\": null,\n          \"longitude\": null,\n          \"contact_number\": \"0112345678\",\n          \"status\": \"active\",\n          \"created_at\": \"2026-11-21T20:33:35.000000Z\",\n          \"updated_at\": \"2026-11-21T20:33:35.000000Z\"\n        }\n      }\n    },\n    {\n      \"id\": 1,\n      \"customer_id\": 2,\n      \"space_id\": 1,\n      \"booking_date\": \"2026-11-23\",\n      \"start_time\": \"10:00:00\",\n      \"end_time\": \"12:00:00\",\n      \"number_of_people\": 20,\n      \"total_price\": \"50.00\",\n      \"status\": \"cancelled\",\n      \"created_at\": \"2026-11-22T14:16:17.000000Z\",\n      \"updated_at\": \"2026-11-22T14:21:17.000000Z\",\n      \"space\": {\n        \"id\": 1,\n        \"name\": \"Training Hall 1\",\n        \"description\": \"Large hall suitable for training sessions and workshops.\",\n        \"type\": \"Training Hall\",\n        \"center_id\": 1,\n        \"maximum_capacity\": 31,\n        \"hourly_price\": \"25.00\",\n        \"status\": \"available\",\n        \"created_at\": \"2026-11-21T20:59:36.000000Z\",\n        \"updated_at\": \"2026-11-21T21:09:32.000000Z\",\n        \"center\": {\n          \"id\": 1,\n          \"name\": \"Damascus Main Center\",\n          \"description\": \"Description Main company center with meeting rooms and coworking spaces.\",\n          \"address\": \"Mazzeh Highway, Building 25\",\n          \"city\": \"Damascus\",\n          \"country\": \"Syria\",\n          \"latitude\": null,\n          \"longitude\": null,\n          \"contact_number\": \"0112345678\",\n          \"status\": \"active\",\n          \"created_at\": \"2026-11-21T20:33:35.000000Z\",\n          \"updated_at\": \"2026-11-21T20:33:35.000000Z\"\n        }\n      }\n    }\n  ]\n}",
+          "code": 200,
+          "cookie": [],
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.12"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 22 Nov 2026 18:05:37 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "name": "allBookings",
+          "originalRequest": {
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ],
+              "port": "8000",
+              "protocol": "http",
+              "raw": "http://127.0.0.1:8000/api/bookings"
+            }
+          },
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "name": "showBooking",
+      "request": {
+        "auth": {
+          "bearer": [
+            {
+              "key": "token",
+              "type": "string",
+              "value": "{{vault:auth_secret_1c9k}}"
+            }
+          ],
+          "type": "bearer"
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "url": {
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "path": [
+            "api",
+            "bookings",
+            "1",
+            ""
+          ],
+          "port": "8000",
+          "protocol": "http",
+          "raw": "http://127.0.0.1:8000/api/bookings/1/"
+        }
+      },
+      "response": [
+        {
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"message\": \"Booking details retrieved successfully.\",\n  \"booking\": {\n    \"id\": 1,\n    \"customer_id\": 2,\n    \"space_id\": 1,\n    \"booking_date\": \"2026-11-23\",\n    \"start_time\": \"10:00:00\",\n    \"end_time\": \"12:00:00\",\n    \"number_of_people\": 20,\n    \"total_price\": \"50.00\",\n    \"status\": \"cancelled\",\n    \"created_at\": \"2026-11-22T14:16:17.000000Z\",\n    \"updated_at\": \"2026-11-22T14:21:17.000000Z\",\n    \"space\": {\n      \"id\": 1,\n      \"name\": \"Training Hall 1\",\n      \"description\": \"Large hall suitable for training sessions and workshops.\",\n      \"type\": \"Training Hall\",\n      \"center_id\": 1,\n      \"maximum_capacity\": 31,\n      \"hourly_price\": \"25.00\",\n      \"status\": \"available\",\n      \"created_at\": \"2026-11-21T20:59:36.000000Z\",\n      \"updated_at\": \"2026-11-21T21:09:32.000000Z\",\n      \"center\": {\n        \"id\": 1,\n        \"name\": \"Damascus Main Center\",\n        \"description\": \"Description Main company center with meeting rooms and coworking spaces.\",\n        \"address\": \"Mazzeh Highway, Building 25\",\n        \"city\": \"Damascus\",\n        \"country\": \"Syria\",\n        \"latitude\": null,\n        \"longitude\": null,\n        \"contact_number\": \"0112345678\",\n        \"status\": \"active\",\n        \"created_at\": \"2026-11-21T20:33:35.000000Z\",\n        \"updated_at\": \"2026-11-21T20:33:35.000000Z\"\n      }\n    }\n  }\n}",
+          "code": 200,
+          "cookie": [],
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.12"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 22 Nov 2026 18:05:44 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "name": "showBooking",
+          "originalRequest": {
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "1",
+                ""
+              ],
+              "port": "8000",
+              "protocol": "http",
+              "raw": "http://127.0.0.1:8000/api/bookings/1/"
+            }
+          },
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "name": "incorrectCreateBooking",
+      "request": {
+        "auth": {
+          "bearer": [
+            {
+              "key": "token",
+              "type": "string",
+              "value": "{{vault:auth_secret_1c9k}}"
+            }
+          ],
+          "type": "bearer"
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "url": {
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "path": [
+            "api",
+            "bookings"
+          ],
+          "port": "8000",
+          "protocol": "http",
+          "query": [
+            {
+              "key": "space_id",
+              "value": "1"
+            },
+            {
+              "key": "start_time",
+              "value": "12:00"
+            },
+            {
+              "key": "end_time",
+              "value": "10:00"
+            },
+            {
+              "key": "booking_date",
+              "value": "2026-11-20"
+            },
+            {
+              "key": "number_of_people",
+              "value": "20"
+            }
+          ],
+          "raw": "http://127.0.0.1:8000/api/bookings?space_id=1&start_time=12:00&end_time=10:00&booking_date=2026-11-20&number_of_people=20"
+        }
+      },
+      "response": [
+        {
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"message\": \"The booking date cannot be in the past. (and 1 more error)\",\n  \"errors\": {\n    \"booking_date\": [\n      \"The booking date cannot be in the past.\"\n    ],\n    \"end_time\": [\n      \"The end time must be after the start time.\"\n    ]\n  }\n}",
+          "code": 422,
+          "cookie": [],
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.12"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 22 Nov 2026 18:05:50 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "name": "incorrectCreateBooking",
+          "originalRequest": {
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "url": {
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ],
+              "port": "8000",
+              "protocol": "http",
+              "query": [
+                {
+                  "key": "space_id",
+                  "value": "1"
+                },
+                {
+                  "key": "start_time",
+                  "value": "12:00"
+                },
+                {
+                  "key": "end_time",
+                  "value": "10:00"
+                },
+                {
+                  "key": "booking_date",
+                  "value": "2026-11-20"
+                },
+                {
+                  "key": "number_of_people",
+                  "value": "20"
+                }
+              ],
+              "raw": "http://127.0.0.1:8000/api/bookings?space_id=1&start_time=12:00&end_time=10:00&booking_date=2026-11-20&number_of_people=20"
+            }
+          },
+          "status": "Unprocessable Content"
+        }
+      ]
+    }
+  ]
+}
