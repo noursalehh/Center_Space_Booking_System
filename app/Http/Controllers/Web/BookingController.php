@@ -27,7 +27,7 @@ class BookingController extends Controller
         return view('bookings.show', compact('booking'));
     }
 
-
+   
     public function updateStatus(
         UpdateBookingStatusRequest $request,Booking $booking ) {
         $validated = $request->validated();

@@ -16,14 +16,20 @@ class SpaceController extends Controller
         return response()->json([
             'message' => 'Spaces retrieved successfully',
             'data' =>[ 
-                'space'=> $spaces,
+                'spaces'=> $spaces,
                 'center'=> $center,
                 ]
         ]);
     }
     public function show($id)
     {
-        $space = Space::findOrFail($id);
+        $space = Space::find($id);
+        if(!$space){
+            return response()->json([
+                'message'=>'Space not found'
+
+            ],404);
+        }
 
         return response()->json([
             'message' => 'Space details retrieved successfully',

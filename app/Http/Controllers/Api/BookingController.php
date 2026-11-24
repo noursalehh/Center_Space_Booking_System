@@ -39,6 +39,7 @@ class BookingController extends Controller
                 'message' => 'This space is not available for booking!!!'
             ], 422);
         }
+        
 
 
         if ($validated['number_of_people'] > $space->maximum_capacity) {
@@ -56,12 +57,10 @@ class BookingController extends Controller
         $totalPrice = ($durationInMinutes / 60) * $space->hourly_price;
 
         
-        $booking = $customer->bookings()->create([
-            ...$validated,
+        $booking = $customer->bookings()->create([...$validated,
             'total_price' => round($totalPrice, 2),
             'status' => 'Pending',
         ]);
-
         
         return response()->json([
             'message' => 'Booking created successfully.',
@@ -80,10 +79,7 @@ class BookingController extends Controller
             ], 404);
         }
 
-        $bookings = $customer->bookings()
-            ->with('space.center')
-            ->latest()
-            ->get();
+        $bookings = $customer->bookings()->with('space.center')->latest()->get();
 
         return response()->json([
             'message' => 'Bookings retrieved successfully.',

@@ -45,9 +45,7 @@ class ApiAuthController extends Controller
     {
         $validated = $request->validated();
 
-        $user = User::query()
-            ->where('email', $validated['email'])
-            ->first();
+        $user = User::query()->where('email', $validated['email']) ->first();
 
         if (!$user || !Hash::check($validated['password'], $user->password) || $user->type !== 'customer') {
             return response()->json([

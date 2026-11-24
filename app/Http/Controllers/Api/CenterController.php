@@ -19,8 +19,14 @@ class CenterController extends Controller
     }
     public function show($id)
     {
-        $center = Center::findOrFail($id);
+        $center = Center::find($id);
+        if(!$center){
+            return response()->json([
+                'message'=>'this center not found'
 
+            ],404);
+        }
+       
         return response()->json([
             'message' => 'Center details retrieved successfully',
             'data' => $center

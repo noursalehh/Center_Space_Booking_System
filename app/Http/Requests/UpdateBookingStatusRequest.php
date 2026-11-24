@@ -24,4 +24,7 @@ class UpdateBookingStatusRequest extends FormRequest
             'status.in' => 'The booking status must be confirmed or rejected.',
         ];
     }
+
+
+
 }
